@@ -67,8 +67,13 @@
 						</a>
 					</li>
 					<li>
-						<a href="faculty.php" class="dropdown-toggle no-arrow">
+						<a href="students.php" class="dropdown-toggle no-arrow">
 							<span class="micon fa fa-wrench"></span><span class="mtext">Students</span>
+						</a>
+					</li>
+					<li>
+						<a href="faculty.php" class="dropdown-toggle no-arrow">
+							<span class="micon fa fa-wrench"></span><span class="mtext">Faculties</span>
 						</a>
 					</li>
 					<li>
