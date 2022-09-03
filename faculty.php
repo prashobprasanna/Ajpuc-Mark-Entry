@@ -126,13 +126,13 @@
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
 									<li class="breadcrumb-item"><a href="index.php">Home</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Technicians</li>
+									<li class="breadcrumb-item active" aria-current="page">Faculties</li>
 								</ol>
 							</nav>
 						</div>
 						<div class="col-md-6 col-sm-12 text-right">
 							<div class="dropdown">
-								<a href="add_student.php" class="btn btn-primary" data-backdrop="static" data-toggle="modal" data-target="#add_technician">
+								<a href="add_faculty.php" class="btn btn-primary" data-backdrop="static" data-toggle="modal" data-target="#add_technician">
 									Add New
 								</a>
 							</div>
@@ -142,7 +142,7 @@
 				<!-- Simple Datatable start -->
 				<div class="card-box mb-30">
 					<div class="pd-20">
-						<h4 class="text-blue h4">Technicians List</h4>
+						<h4 class="text-blue h4">Faculties List</h4>
 					</div>
 					<div class="pb-20">
 						<table class="data-table table responsive">
