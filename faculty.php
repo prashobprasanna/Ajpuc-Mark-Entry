@@ -148,12 +148,12 @@
 						<table class="data-table table responsive">
 							<thead>
 								<tr>
-									<th>Employee Id</th>
-									<th>Employee Name</th>
-									<th>Address</th>
+									<th>Faculty Name</th>
+									<th>Gender</th>
 									<th>Email</th>
-									<th>Contact</th>
-									<th>Description</th>
+									<th>Phone</th>
+									<th>Qualification</th>
+									<th>Status</th>
 									<th class="datatable-nosort">Action</th>
 								</tr>
 							</thead>
@@ -161,7 +161,7 @@
 								<?php
 								include('connection.php');
 								$i = 1;
-								$sql = mysqli_query($con, "SELECT * FROM tblemployee");
+								$sql = mysqli_query($con, "SELECT * FROM ");
 								while ($result = mysqli_fetch_assoc($sql)) {
 								?>
 									<tr>
