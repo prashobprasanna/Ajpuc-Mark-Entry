@@ -3,7 +3,7 @@
 <head>
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
-	<title>Tyre Resole Factory Management System</title>
+	<title>AJPUC-MARK-ENTRY SYSTEM</title>
 
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -67,8 +67,8 @@
 						</a>
 					</li>
 					<li>
-						<a href="technician.php" class="dropdown-toggle no-arrow">
-							<span class="micon fa fa-wrench"></span><span class="mtext">Technician</span>
+						<a href="faculty.php" class="dropdown-toggle no-arrow">
+							<span class="micon fa fa-wrench"></span><span class="mtext">Students</span>
 						</a>
 					</li>
 					<li>
