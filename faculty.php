@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
@@ -18,6 +19,7 @@
 	<link rel="stylesheet" type="text/css" href="vendors/styles/style.css">
 
 </head>
+
 <body>
 	<div class="header">
 		<div class="header-left">
@@ -67,8 +69,8 @@
 						</a>
 					</li>
 					<li>
-						<a href="technician.php" class="dropdown-toggle no-arrow">
-							<span class="micon fa fa-wrench"></span><span class="mtext">Technician</span>
+						<a href="faculty.php" class="dropdown-toggle no-arrow">
+							<span class="micon fa fa-wrench"></span><span class="mtext">Students</span>
 						</a>
 					</li>
 					<li>
@@ -130,7 +132,7 @@
 						</div>
 						<div class="col-md-6 col-sm-12 text-right">
 							<div class="dropdown">
-								<a href="#" class="btn btn-primary" data-backdrop="static" data-toggle="modal" data-target="#add_technician">
+								<a href="add_student.php" class="btn btn-primary" data-backdrop="static" data-toggle="modal" data-target="#add_technician">
 									Add New
 								</a>
 							</div>
@@ -157,230 +159,231 @@
 							</thead>
 							<tbody>
 								<?php
-										include('connection.php');
-										$i=1;
-										$sql=mysqli_query($con,"SELECT * FROM tblemployee");
-										while($result= mysqli_fetch_assoc($sql))
-										{
-									?>
-								<tr>
+								include('connection.php');
+								$i = 1;
+								$sql = mysqli_query($con, "SELECT * FROM tblemployee");
+								while ($result = mysqli_fetch_assoc($sql)) {
+								?>
+									<tr>
 										<?php $i++;
-									//	$Emp_Id= $result['Emp_Id'];
-									  
+										//	$Emp_Id= $result['Emp_Id'];
+
 										?>
 										<td><?php echo $result['Emp_Id'];  ?></td>
-										
+
 										<td><?php echo $result['Emp_Name']; ?></td>
 										<td><?php echo $result['Emp_Address']; ?></td>
 										<td><?php echo $result['Emp_Email']; ?></td>
 										<td><?php echo $result['Emp_Phone']; ?></td>
 										<td><?php echo $result['Emp_Desc']; ?></td>
 										<td>
-										<div class="dropdown">
-											<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-												<i class="dw dw-more"></i>
-											</a>
-											<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-											    <?php $_SESSION['Emp_Id']=$result['Emp_Id']; ?>
-												<!-- <a class="dropdown-item" href="viewTech.php?Emp_Id=<?php echo $result['Emp_Id'];?>"><i class="dw dw-eye"></i> View</a> -->
-												<a class="dropdown-item" href="viewTech.php?Emp_Id=<?php echo $result['Emp_Id'];?>#update_technician" data-target="#update_technician"><i class="dw dw-eye"></i> View</a>
-												<a class="dropdown-item" href="updateTech.php?Emp_Id=<?php echo $result['Emp_Id'];?>#update_technician" data-target="#update_technician"><i class="dw dw-edit2"></i> Edit</a>
-												<a class="dropdown-item" href="deltech.php?Emp_Id=<?php echo $result['Emp_Id'];?>"><i class="dw dw-delete-3"></i> Delete</a>
+											<div class="dropdown">
+												<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+													<i class="dw dw-more"></i>
+												</a>
+												<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+													<?php $_SESSION['Emp_Id'] = $result['Emp_Id']; ?>
+													<!-- <a class="dropdown-item" href="viewTech.php?Emp_Id=<?php echo $result['Emp_Id']; ?>"><i class="dw dw-eye"></i> View</a> -->
+													<a class="dropdown-item" href="viewTech.php?Emp_Id=<?php echo $result['Emp_Id']; ?>#update_technician" data-target="#update_technician"><i class="dw dw-eye"></i> View</a>
+													<a class="dropdown-item" href="updateTech.php?Emp_Id=<?php echo $result['Emp_Id']; ?>#update_technician" data-target="#update_technician"><i class="dw dw-edit2"></i> Edit</a>
+													<a class="dropdown-item" href="deltech.php?Emp_Id=<?php echo $result['Emp_Id']; ?>"><i class="dw dw-delete-3"></i> Delete</a>
+												</div>
 											</div>
-										</div>
-									</td>
-								</tr>
-								<?php 	
-										}
-								 ?>
+										</td>
+									</tr>
+								<?php
+								}
+								?>
 							</tbody>
 						</table>
 					</div>
 				</div>
 				<!-- Simple Datatable End -->
+			</div>
 		</div>
-	</div>
-				<!-- Add Technician Modal -->
-				<form action="addtechnician.php" method="post">
-					<div class="col-md-12 col-sm-12 mb-30">
-							<div class="modal fade" id="add_technician" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-								<div class="modal-dialog modal-dialog-centered">
-									<div class="modal-content">
-										<div class=" border-radius-10">
-											<div class="login-title"><br>
-												<div class="col-md-12 col-sm-12 mb-30">
-												<h2 class="text-center text-primary">Add Technician</h2>
-												</div>
-											<form>
-
-												<div class="input-group custom">
-												<div class="col-md-6 col-sm-12">
-													<div class="form-group">
-																<label>Technician Name</label>
-																<input class="form-control form-control-lg" type="text" name="techName">
-															</div>
-												</div>
-												<div class="col-md-6 col-sm-12">
-													<div class="form-group">
-																<label>Email</label>
-																<input class="form-control form-control-lg" type="text" name="techmail">
-															</div>
-												</div>
-												<div class="col-md-6 col-sm-12">
-													<div class="form-group">
-																<label>Contact</label>
-																<input class="form-control form-control-lg" type="text" name="techPhone">
-															</div>
-												</div>
-												<div class="col-md-12 col-sm-12">
-													<div class="form-group">
-																<label>Address</label>
-																<input class="form-control form-control-lg" type="text" name="techAdd">
-															</div>
-												</div>
-												<div class="col-md-12 col-sm-12">
-													<div class="form-group">
-																<label>Description</label>
-																<input class="form-control form-control-lg" type="text" name="techdesc">
-															</div>
-												</div>
-												<div class="col-md-6 col-sm-12">
-													<div class="form-group">
-																<label>Password</label>
-																<input class="form-control form-control-lg" type="password" name="techpass">
-															</div>
-												</div>
-												<div class="col-md-12 col-sm-12">
-													<div class="form-group">
-																<label>Profile</label>
-																<input class="form-control form-control-lg" type="file" name="profile">
-															</div>
-												</div>
-												<div class="col-md-12 col-sm-12">
-													<div class="form-group">
-																<input type="submit" class="btn btn-primary" value="Submit" name="addnew">
-																<input type="submit" class="btn btn-danger" value="Cancel">
-															</div>
-												</div>
-												</div>
-											</form>
-										</div>
+		<!-- Add Technician Modal -->
+		<form action="addtechnician.php" method="post">
+			<div class="col-md-12 col-sm-12 mb-30">
+				<div class="modal fade" id="add_technician" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content">
+							<div class=" border-radius-10">
+								<div class="login-title"><br>
+									<div class="col-md-12 col-sm-12 mb-30">
+										<h2 class="text-center text-primary">Add Technician</h2>
 									</div>
+									<form>
+
+										<div class="input-group custom">
+											<div class="col-md-6 col-sm-12">
+												<div class="form-group">
+													<label>Technician Name</label>
+													<input class="form-control form-control-lg" type="text" name="techName">
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-12">
+												<div class="form-group">
+													<label>Email</label>
+													<input class="form-control form-control-lg" type="text" name="techmail">
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-12">
+												<div class="form-group">
+													<label>Contact</label>
+													<input class="form-control form-control-lg" type="text" name="techPhone">
+												</div>
+											</div>
+											<div class="col-md-12 col-sm-12">
+												<div class="form-group">
+													<label>Address</label>
+													<input class="form-control form-control-lg" type="text" name="techAdd">
+												</div>
+											</div>
+											<div class="col-md-12 col-sm-12">
+												<div class="form-group">
+													<label>Description</label>
+													<input class="form-control form-control-lg" type="text" name="techdesc">
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-12">
+												<div class="form-group">
+													<label>Password</label>
+													<input class="form-control form-control-lg" type="password" name="techpass">
+												</div>
+											</div>
+											<div class="col-md-12 col-sm-12">
+												<div class="form-group">
+													<label>Profile</label>
+													<input class="form-control form-control-lg" type="file" name="profile">
+												</div>
+											</div>
+											<div class="col-md-12 col-sm-12">
+												<div class="form-group">
+													<input type="submit" class="btn btn-primary" value="Submit" name="addnew">
+													<input type="submit" class="btn btn-danger" value="Cancel">
+												</div>
+											</div>
+										</div>
+									</form>
 								</div>
 							</div>
 						</div>
-					</form>
-
-
-					<form action="updateTech.php" method="post">
-
-					
-					<div class="col-md-12 col-sm-12 mb-30">
-							<div class="modal fade" id="update_techniciany36" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-							<?php
-									//	include('connection.php');
-							
-										$i=1;
-									//	$emps=$_GET['Emp_Id'];
-										$sql=mysqli_query($con,"SELECT * FROM tblemployee where Emp_Id=$Emp_Id");
-										if($result= mysqli_fetch_assoc($sql))
-										{
-									?>
-								<div class="modal-dialog modal-dialog-centered">
-									<div class="modal-content">
-										<div class=" border-radius-10">
-											<div class="login-title"><br>
-												<div class="col-md-12 col-sm-12 mb-30">
-												<h2 class="text-center text-primary">Update Technician</h2>
-												</div>
-											<form>
-												
-
-												<div class="input-group custom">
-												<div class="col-md-6 col-sm-12">
-													<div class="form-group">
-																<label>Technician Name</label>
-																<input class="form-control form-control-lg" type="text" name="techName" value="<?php echo $Emp_Id;  ?>">
-															</div>
-												</div>
-												<div class="col-md-6 col-sm-12">
-													<div class="form-group">
-																<label>Email</label>
-																<input class="form-control form-control-lg" type="text" name="techmail" value="<?php echo $result['Emp_Email'];  ?>">
-															</div>
-												</div>
-												<div class="col-md-6 col-sm-12">
-													<div class="form-group">
-																<label>Contact</label>
-																<input class="form-control form-control-lg" type="text" name="techPhone" value="<?php echo $result['Emp_Phone'];  ?>">
-															</div>
-												</div>
-												<div class="col-md-12 col-sm-12">
-													<div class="form-group">
-																<label>Address</label>
-																<input class="form-control form-control-lg" type="text" name="techAdd"value="<?php echo $result['Emp_Address'];  ?>" >
-															</div>
-												</div>
-												<div class="col-md-12 col-sm-12">
-													<div class="form-group">
-																<label>Description</label>
-																<input class="form-control form-control-lg" type="text" name="techdesc" value="<?php echo $result['Emp_Desc'];  ?>">
-															</div>
-												</div>
-
-												
-													
-												<div class="col-md-6 col-sm-12">
-													<div class="form-group">
-																<label>Password</label>
-																<input class="form-control form-control-lg" type="password" name="techpass"value="<?php echo $result['Emp_Password'];  ?>" >
-															</div>
-												</div>
-												<div class="col-md-12 col-sm-12">
-													<div class="form-group">
-																<label>Profile</label>
-																<input class="form-control form-control-lg" type="file" name="profile">
-															</div>
-												</div>
-												<div class="col-md-12 col-sm-12">
-													<div class="form-group">
-																<input type="submit" class="btn btn-primary" value="Submit" name="addnew" >
-																<input type="submit" class="btn btn-danger" value="Cancel">
-															</div>
-												</div>
-												</div>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<?php } ?>
-					</form>
-						<!-- Delete modal -->
-					<div class="col-md-4 col-sm-12 mb-30">
-							<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-								<div class="modal-dialog modal-sm modal-dialog-centered">
-									<div class="modal-content bg-danger text-white">
-										<div class="modal-body text-center">
-											<h3 class="text-white mb-15"><i class="fa fa-exclamation-triangle"></i> Alert</h3>
-											<p>Are you sure you want to delete this Technician?</p>
-											<button type="button" class="btn btn-light" data-dismiss="modal">Yes</button>
-											<button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
-										</div>
-									</div>
-								</div>
-							</div>
 					</div>
-	<!-- js -->
-	<script src="vendors/scripts/core.js"></script>
-	<script src="vendors/scripts/script.min.js"></script>
-	<script src="vendors/scripts/process.js"></script>
-	<script src="vendors/scripts/layout-settings.js"></script>
-	<script src="src/plugins/datatables/js/jquery.dataTables.min.js"></script>
-	<script src="src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
-	<script src="src/plugins/datatables/js/dataTables.responsive.min.js"></script>
-	<script src="src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
-	<!-- Datatable Setting js -->
-	<script src="vendors/scripts/datatable-setting.js"></script></body>
+				</div>
+			</div>
+		</form>
+
+
+		<form action="updateTech.php" method="post">
+
+
+			<div class="col-md-12 col-sm-12 mb-30">
+				<div class="modal fade" id="update_techniciany36" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<?php
+					//	include('connection.php');
+
+					$i = 1;
+					//	$emps=$_GET['Emp_Id'];
+					$sql = mysqli_query($con, "SELECT * FROM tblemployee where Emp_Id=$Emp_Id");
+					if ($result = mysqli_fetch_assoc($sql)) {
+					?>
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class=" border-radius-10">
+									<div class="login-title"><br>
+										<div class="col-md-12 col-sm-12 mb-30">
+											<h2 class="text-center text-primary">Update Technician</h2>
+										</div>
+										<form>
+
+
+											<div class="input-group custom">
+												<div class="col-md-6 col-sm-12">
+													<div class="form-group">
+														<label>Technician Name</label>
+														<input class="form-control form-control-lg" type="text" name="techName" value="<?php echo $Emp_Id;  ?>">
+													</div>
+												</div>
+												<div class="col-md-6 col-sm-12">
+													<div class="form-group">
+														<label>Email</label>
+														<input class="form-control form-control-lg" type="text" name="techmail" value="<?php echo $result['Emp_Email'];  ?>">
+													</div>
+												</div>
+												<div class="col-md-6 col-sm-12">
+													<div class="form-group">
+														<label>Contact</label>
+														<input class="form-control form-control-lg" type="text" name="techPhone" value="<?php echo $result['Emp_Phone'];  ?>">
+													</div>
+												</div>
+												<div class="col-md-12 col-sm-12">
+													<div class="form-group">
+														<label>Address</label>
+														<input class="form-control form-control-lg" type="text" name="techAdd" value="<?php echo $result['Emp_Address'];  ?>">
+													</div>
+												</div>
+												<div class="col-md-12 col-sm-12">
+													<div class="form-group">
+														<label>Description</label>
+														<input class="form-control form-control-lg" type="text" name="techdesc" value="<?php echo $result['Emp_Desc'];  ?>">
+													</div>
+												</div>
+
+
+
+												<div class="col-md-6 col-sm-12">
+													<div class="form-group">
+														<label>Password</label>
+														<input class="form-control form-control-lg" type="password" name="techpass" value="<?php echo $result['Emp_Password'];  ?>">
+													</div>
+												</div>
+												<div class="col-md-12 col-sm-12">
+													<div class="form-group">
+														<label>Profile</label>
+														<input class="form-control form-control-lg" type="file" name="profile">
+													</div>
+												</div>
+												<div class="col-md-12 col-sm-12">
+													<div class="form-group">
+														<input type="submit" class="btn btn-primary" value="Submit" name="addnew">
+														<input type="submit" class="btn btn-danger" value="Cancel">
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+			<?php } ?>
+		</form>
+		<!-- Delete modal -->
+		<div class="col-md-4 col-sm-12 mb-30">
+			<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-sm modal-dialog-centered">
+					<div class="modal-content bg-danger text-white">
+						<div class="modal-body text-center">
+							<h3 class="text-white mb-15"><i class="fa fa-exclamation-triangle"></i> Alert</h3>
+							<p>Are you sure you want to delete this Technician?</p>
+							<button type="button" class="btn btn-light" data-dismiss="modal">Yes</button>
+							<button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- js -->
+		<script src="vendors/scripts/core.js"></script>
+		<script src="vendors/scripts/script.min.js"></script>
+		<script src="vendors/scripts/process.js"></script>
+		<script src="vendors/scripts/layout-settings.js"></script>
+		<script src="src/plugins/datatables/js/jquery.dataTables.min.js"></script>
+		<script src="src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+		<script src="src/plugins/datatables/js/dataTables.responsive.min.js"></script>
+		<script src="src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+		<!-- Datatable Setting js -->
+		<script src="vendors/scripts/datatable-setting.js"></script>
+</body>
+
 </html>
