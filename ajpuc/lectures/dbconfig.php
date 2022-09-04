@@ -4,9 +4,9 @@ if (session_id() == "")
 session_start();
 }    
 $servername = "localhost";
-$username = "kvgenggco_admin";
-$password = "Geleyageleya";
-$dbname = "kvgenggco_".$_SESSION['dbnamez'];
+$username = "root";
+$password = "";
+$dbname = "student_db";
 
 // Create connection
 $con = new mysqli($servername, $username, $password, $dbname);

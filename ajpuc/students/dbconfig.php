@@ -16,6 +16,6 @@ if ($con->connect_error) {
     die("Connection failed: " . $con->connect_error);
 } 
 else{
-    echo "Coyg nftgyhuijmko,lp";
+    echo "Connection was successful";
 }
 ?>

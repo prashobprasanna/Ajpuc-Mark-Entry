@@ -4,8 +4,8 @@ if (session_id() == "")
 session_start();
 }    
 $servername = "localhost";
-$username = "kvgenggco_admin";
-$password = "Geleyageleya";
+$username = "root";
+$password = "";
 
 $dbname2="kvgenggco_admin";
 // Create connection
