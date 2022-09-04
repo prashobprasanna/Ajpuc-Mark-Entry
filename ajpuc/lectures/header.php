@@ -27,7 +27,7 @@
    header("location:index.php");
    }
    
-   $sql2="SELECT Name,url from faculty WHERE email='$email'";
+   $sql2="SELECT * from faculty WHERE Email_ID='$email'";
    $result2=$con->query($sql2);
    $row2=$result2->fetch_assoc();
    
@@ -109,17 +109,17 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="<?php echo $row2['url'];?>" class="user-image" alt="User Image">
                         <?php
-                          $sql="SELECT Name from faculty WHERE email='$email'";
+                          $sql="SELECT Name from faculty WHERE Email_ID='$email'";
                           $result0=$con->query($sql);
                           $row=$result0->fetch_assoc();
-                          $_SESSION['facname']=$row['Name'];
-                         echo '<span class="hidden-xs">'.$row['Name'].'</span>'
+                          $_SESSION['facname']=$row['Fname'];
+                         echo '<span class="hidden-xs">'.$row['Fname'].'</span>'
                         ?>
                         </a>
                         <ul class="dropdown-menu">
                            <!-- User image -->
                            <li class="user-header">
-                              <img src="<?php echo $row2['url'];?>" class="img-circle" alt="User Image">
+                              <!-- <img src="<?php echo $row2['url'];?>" class="img-circle" alt="User Image"> -->
                               <p>
                                  <?php echo $email;?>
                               </p>

@@ -23,13 +23,13 @@
                <div class="small-box bg-aqua">
                   <div class="inner">
                       <?php 
-                      $dbs=$_SESSION["dbnamez"];
-                    echo "<script type='text/javascript'>alert('$dbs');</script>";
-                        $tm    = "SELECT DISTINCT usn FROM marks";
+                 //     $dbs=$_SESSION["dbnamez"];
+                   // echo "<script type='text/javascript'>alert('$dbs');</script>";
+                       $tm    = "SELECT * FROM student";
                         $tmresult = $con->query($tm);
                         $tmcount  = mysqli_num_rows($tmresult);
                         ?>
-                     <h3><?php echo $tmcount;?></h3>
+                     <!-- <h3></h3>  -->
                      <p>Students</p>
                   </div>
                   <div class="icon">

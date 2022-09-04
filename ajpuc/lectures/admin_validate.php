@@ -1,27 +1,20 @@
 <?php
     session_start();	//Starting session here.
     extract($_REQUEST);// Extracting the Request.
-    $_SESSION["dbnamez"]=$dbnam;
+    //$_SESSION["dbnamez"]=$dbnam;
 
     include("dbconfig.php");
-   if($dbnam=='admin')
-   {
-        $sql="SELECT * FROM kvgenggco_admin.faculty WHERE (Name='$email' OR email='$email') and pass='$pwd'";
-   }
-   else
-   {
-       $sql="SELECT * FROM faculty WHERE (Name='$email' OR email='$email') and pass='$pwd'";
-   }
-    $result=$con->query($sql);
-    $row=$result->fetch_assoc();
+    $sql = "SELECT * FROM faculty where Email_ID ='$email' and password='$pwd'";
+    $result = $con->query($sql);
+    $row = $result->fetch_assoc();
     
    
    if(is_array($row)) {
         // setting the session variables.
         $_SESSION['start_time'] = time();
-        $_SESSION["email"] = $row['email'];
-        $_SESSION["aid"] = $row['idn'];
-        $_SESSION["username"] = $row['Name'];
+        $_SESSION["email"] = $row['Email_ID'];
+      //   $_SESSION["aid"] = $row['idn'];
+       // $_SESSION["username"] = $row['Name'];
     } 
     else 
 	{
