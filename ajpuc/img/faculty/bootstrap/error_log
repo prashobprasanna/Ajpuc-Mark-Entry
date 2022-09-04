@@ -1,0 +1,20 @@
+[16-Aug-2018 18:53:24 Europe/London] PHP Parse error:  syntax error, unexpected '}' in /home/kvgenggco/public_html/img/faculty/bootstrap/del_fac.php on line 22
+[16-Aug-2018 18:53:28 Europe/London] PHP Parse error:  syntax error, unexpected '}' in /home/kvgenggco/public_html/img/faculty/bootstrap/del_fac.php on line 22
+[16-Aug-2018 18:55:49 Europe/London] PHP Parse error:  syntax error, unexpected '}' in /home/kvgenggco/public_html/img/faculty/bootstrap/del_fac.php on line 13
+[16-Aug-2018 18:55:51 Europe/London] PHP Parse error:  syntax error, unexpected '}' in /home/kvgenggco/public_html/img/faculty/bootstrap/del_fac.php on line 13
+[16-Aug-2018 18:58:36 Europe/London] PHP Parse error:  syntax error, unexpected '}' in /home/kvgenggco/public_html/img/faculty/bootstrap/del_fac.php on line 15
+[16-Aug-2018 18:58:39 Europe/London] PHP Parse error:  syntax error, unexpected '}' in /home/kvgenggco/public_html/img/faculty/bootstrap/del_fac.php on line 15
+[16-Aug-2018 19:00:33 Europe/London] PHP Parse error:  syntax error, unexpected '}' in /home/kvgenggco/public_html/img/faculty/bootstrap/del_fac.php on line 15
+[16-Aug-2018 19:01:37 Europe/London] PHP Fatal error:  Call to a member function query() on null in /home/kvgenggco/public_html/img/faculty/bootstrap/del_fac.php on line 9
+[16-Aug-2018 19:05:44 Europe/London] PHP Notice:  Undefined index: newdata in /home/kvgenggco/public_html/img/faculty/bootstrap/dbconfig.php on line 16
+[16-Aug-2018 19:05:44 Europe/London] PHP Notice:  Undefined index: frmSub in /home/kvgenggco/public_html/img/faculty/bootstrap/dbconfig.php on line 18
+[16-Aug-2018 19:05:44 Europe/London] PHP Notice:  Undefined variable: PHP_SELF in /home/kvgenggco/public_html/img/faculty/bootstrap/dbconfig.php on line 26
+[16-Aug-2018 19:07:43 Europe/London] PHP Notice:  Undefined index: newdata in /home/kvgenggco/public_html/img/faculty/bootstrap/dbconfig.php on line 16
+[16-Aug-2018 19:07:43 Europe/London] PHP Notice:  Undefined index: frmSub in /home/kvgenggco/public_html/img/faculty/bootstrap/dbconfig.php on line 18
+[16-Aug-2018 19:07:43 Europe/London] PHP Notice:  Undefined variable: PHP_SELF in /home/kvgenggco/public_html/img/faculty/bootstrap/dbconfig.php on line 26
+[16-Aug-2018 19:07:46 Europe/London] PHP Notice:  Undefined index: newdata in /home/kvgenggco/public_html/img/faculty/bootstrap/dbconfig.php on line 16
+[16-Aug-2018 19:07:46 Europe/London] PHP Notice:  Undefined index: frmSub in /home/kvgenggco/public_html/img/faculty/bootstrap/dbconfig.php on line 18
+[16-Aug-2018 19:07:46 Europe/London] PHP Notice:  Undefined variable: PHP_SELF in /home/kvgenggco/public_html/img/faculty/bootstrap/dbconfig.php on line 26
+[16-Aug-2018 19:12:52 Europe/London] PHP Notice:  Undefined index: newdata in /home/kvgenggco/public_html/img/faculty/bootstrap/dbconfig.php on line 16
+[16-Aug-2018 19:12:52 Europe/London] PHP Notice:  Undefined index: frmSub in /home/kvgenggco/public_html/img/faculty/bootstrap/dbconfig.php on line 18
+[16-Aug-2018 19:12:52 Europe/London] PHP Notice:  Undefined variable: PHP_SELF in /home/kvgenggco/public_html/img/faculty/bootstrap/dbconfig.php on line 26

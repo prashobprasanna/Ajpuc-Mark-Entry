@@ -1,0 +1,1 @@
+[12-Oct-2018 10:02:21 Europe/London] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/kvgenggco/public_html/students/admin_validate.php on line 48
