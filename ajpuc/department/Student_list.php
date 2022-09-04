@@ -81,55 +81,76 @@ td{ font-size:12px !important; }
                         <table id="example1" class="table table-bordered table-striped">
   <thead role="rowgroup">
     <tr role="row">
-        <th role="columnheader">Photo</th>
-      <th role="columnheader"> USN </th>
-      <th role="columnheader">Name</th>
-      <th role="columnheader">SEM </th>
-      <th role="columnheader">SEC</th>
-      <th role="columnheader">student Phone</th>
-      <th role="columnheader">Parent Phone</th>
-      <th role="columnheader"> Parent Name</th>
-      <th role="columnheader"> Permanent Add</th>
-      <th role="columnheader">Campus Add</th>
-        <th role="columnheader" class="action">Action</th>
+        <th role="columnheader">Fname</th>
+      <th role="columnheader"> Lname </th>
+      <th role="columnheader">Roll_No </th>
+      <th role="columnheader">Gender</th>
+      <th role="columnheader">Phone_No</th>
+      <th role="columnheader">Email_ID</th>
+      <th role="columnheader"> Remarks</th>
+      <th role="columnheader"> Reg_No</th>
+      <th role="columnheader">SATS_No</th>
+      <th role="columnheader">Enroll_No</th>
+      <th role="columnheader">Father_Name</th>
+      <th role="columnheader">Mother_Name</th>
+      <th role="columnheader">DOB</th>
+      <th role="columnheader">Address_1</th>
+      <th role="columnheader">Address_2</th>
+      <th role="columnheader">City</th>     
+       <th role="columnheader" class="action">Action</th>
     </tr>
   </thead>
   <tbody role="rowgroup">
                                  <?php
                                 $i=1;
-                                $sql = "SELECT * from students where sem<9 order by usn asc";
+                                $sql = "SELECT * from student  order by Roll_No asc";
                                 $result = $con->query($sql);
                                 while($row = $result->fetch_assoc())
                                 { 
                                 ?>
                                 <tr role="row">
-				<td role="cell"><img src="<?php echo $row['url'];?>" style="height:4.5cm;width:3.5cm;"></td>
-                               <td role="cell"><?=$row['USN'];?></td>
-                                <td role="cell"><?=$row['Name'];?></td>
-                                <td role="cell"><?=$row['sem'];?></td>
-                                  <td role="cell"><?=strtoupper($row['sec']);?></td>
-                                  <td role="cell"><?=$row['studnum'];?></td>
-                                   <td role="cell"><?=$row['parnum'];?></td>
-                                    <td role="cell"><?=$row['parname'];?></td>
-                                     <td role="cell" style="font-size: 12px;"><?=$row['addl1'].'<br>'.$row['addl2'].'<br>'.$row['addl3'].'<br>'.$row['pincode'];?></td>
-                                      <td role="cell" style="font-size: 12px;"><?=$row['caddl1'].'<br>'.$row['caddl2'].'<br>'.$row['caddl3'].'<br>'.$row['cpincode'];?></td>
-				<td role="cell"  class="action"><a href="edit_student.php?oldusn=<?php echo $row['USN'];?>"><button>EDIT</button></a><span> </span><a href="del_stud.php?id=<?php echo $row['idn'];?>"><button>DELETE</button></a></td>
+				
+                               <td role="cell"><?=$row['Fname'];?></td>
+                                <td role="cell"><?=$row['Lname'];?></td>
+                                <td role="cell"><?=$row['Roll_No'];?></td>
+                                <td role="cell"><?=$row['Gender'];?></td>
+                                <td role="cell"><?=$row['Phone_No'];?></td>
+                                <td role="cell"><?=$row['Email_ID'];?></td>
+                                <td role="cell"><?=$row['Remarks'];?></td>
+                                <td role="cell"><?=$row['Reg_No'];?></td>
+                                <td role="cell"><?=$row['SATS_No'];?></td>
+                                <td role="cell"><?=$row['Enroll_No'];?></td>
+                                <td role="cell"><?=$row['Fathers_Name'];?></td>
+                                <td role="cell"><?=$row['Mothers_Name'];?></td>
+                                <td role="cell"><?=$row['DOB'];?></td>
+                                <td role="cell"><?=$row['Address_1'];?></td>
+                                <td role="cell"><?=$row['Address_2'];?></td>
+                                <td role="cell"><?=$row['City'];?></td>
+                                 
+				
                              </tr>
                              <?php $i++; } ?>
                               </tbody>
                               <tfoot class="hidden-xs hidden-sm">
                                  <tr>
 				    <th>Photo</th>
-                                    <th> USN </th>
-                                    <th> Name </th>
-                                    <th> SEM </th>
-                                    <th> SEC </th>
-                                    <th> student Phno </th>
-                                    <th> Parent Phno </th>
-                                    <th> Parent Name </th>
-                                    <th> Permanent Addr </th>
-                                    <th> Campus Addr </th>
-			            <th  class="action"> ACTION</th>
+            <th role="columnheader">Fname</th>
+      <th role="columnheader"> Lname </th>
+      <th role="columnheader">Roll_No </th>
+      <th role="columnheader">Gender</th>
+      <th role="columnheader">Phone_No</th>
+      <th role="columnheader">Email_ID</th>
+      <th role="columnheader"> Remarks</th>
+      <th role="columnheader"> Reg_No</th>
+      <th role="columnheader">SATS_No</th>
+      <th role="columnheader">Enroll_No</th>
+      <th role="columnheader">Father_Name</th>
+      <th role="columnheader">Mother_Name</th>
+      <th role="columnheader">DOB</th>
+      <th role="columnheader">Address_1</th>
+      <th role="columnheader">Address_2</th>
+      <th role="columnheader">City</th>              
+	            <th  class="action"> ACTION</th>
                                  </tr>
                               </tfoot>
                            </table>
