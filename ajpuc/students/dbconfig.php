@@ -4,9 +4,9 @@ if (session_id() == "")
 session_start();
 }    
 $servername = "localhost";
-$username = "kvgenggco_admin";
-$password = "Geleyageleya";
-$dbname = "kvgenggco_".$_SESSION["dbname"];
+$username = "root";
+$password = "";
+$dbname = "student_db";
 
 // Create connection
 $con = new mysqli($servername, $username, $password, $dbname);
@@ -15,4 +15,7 @@ $con = new mysqli($servername, $username, $password, $dbname);
 if ($con->connect_error) {
     die("Connection failed: " . $con->connect_error);
 } 
+else{
+    echo "Coyg nftgyhuijmko,lp";
+}
 ?>
