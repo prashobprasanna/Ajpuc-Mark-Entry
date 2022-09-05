@@ -3,7 +3,7 @@
 
 <?php
 extract($_REQUEST); // Extracting the Request.
-   $dbname= $_SESSION["dbnamez"]; 
+  // $dbname= $_SESSION["dbnamez"]; 
     
     if($dbname == "admin") { ?>
     <aside class="main-sidebar">

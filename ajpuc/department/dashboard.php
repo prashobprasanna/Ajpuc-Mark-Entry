@@ -23,7 +23,7 @@
                <div class="small-box bg-aqua">
                   <div class="inner">
                       <?php 
-                        $tm    = "SELECT * FROM students";
+                        $tm    = "SELECT * FROM student";
                         $tmresult = $con->query($tm);
                         $tmcount  = mysqli_num_rows($tmresult);
                         ?>
@@ -61,7 +61,7 @@
                <div class="small-box bg-yellow">
                   <div class="inner">
                      <?php 
-                        $tr  = "SELECT * FROM subjects";
+                        $tr  = "SELECT * FROM subject";
                         $trresult = $con->query($tr);
                         $trcount  = mysqli_num_rows($trresult);
                         ?>
