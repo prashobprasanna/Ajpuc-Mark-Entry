@@ -91,7 +91,7 @@ $row = $result->fetch_assoc();
                            <label for="name" class="control-label">Address Line 1 </label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" value="<?php echo $row['Address_1']; ?>" name="faddl1" required>
+                           <input type="text" class="form-control" value="<?php echo $row['Add_1']; ?>" name="faddl1" required>
                         </div>
                      </div>
                      <div class="form-group">
@@ -99,17 +99,17 @@ $row = $result->fetch_assoc();
                            <label for="name" class="control-label">Address Line 2 </label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" value="<?php echo $row['Address_2']; ?>" name="faddl2">
+                           <input type="text" class="form-control" value="<?php echo $row['Add_2']; ?>" name="faddl2">
                         </div>
                      </div>
-                     <div class="form-group">
+                     <!-- <div class="form-group">
                         <div class="col-md-4 col-sm-4 col-sx-12 row-4">
                            <label for="name" class="control-label">Address Line 3 </label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
                            <input type="text" class="form-control" value="<?php echo $row['City']; ?>" name="faddl3">
                         </div>
-                     </div>
+                     </div> -->
                      <div class="form-group">
                         <div class="col-md-4 col-sm-4 col-sx-12 row-4">
                            <label for="name" class="control-label">Pin Code </label><span id="sp">:</span>
