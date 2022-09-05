@@ -106,17 +106,24 @@ extract($_REQUEST); ?>
                            <label for="name" class="control-label">DOB</label><span id="sp">:</span> <span style="color:#f00">*</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="usn" required>
+                           <input type="date" class="form-control" name="usn" required>
                         </div>
                      </div>
 
                      <div class="form-group">
                         <div class="col-md-4 col-sm-4 col-sx-12">
+                           
                            <label for="name" class="control-label">Gender
                            </label><span id="sp">:</span> <span style="color:#f00">*</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="sname" required>
+                           <!-- <input type="text" class="form-control" name="sname" required> -->
+                           <select name="Gender">
+                              <option disabled selected value> -- select an option -- </option>
+                              <option value="m">Male</option>
+                              <option value="f">Female</option>
+                              <option value="o">Others</option>
+                           </select>
                         </div>
                      </div>
 
@@ -229,7 +236,7 @@ extract($_REQUEST); ?>
                            <label for="name" class="control-label">Address Line 2 </label><span id="sp">:</span> <span style="color:#f00">*</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="addl2" required>
+                           <input type="text" class="form-control" name="add12" required>
                         </div>
                      </div>
                      <div class="form-group">

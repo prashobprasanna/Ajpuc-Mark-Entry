@@ -146,7 +146,11 @@ extract($_REQUEST); ?>
                                     <td><?=$row['Status'];?></td>
                                     <td><?=$row['Gender'];?></td>
                                   <td><?=$row['Qualification'];?></td>
+<<<<<<< HEAD
+                                  <td><a href="edit_fac.php?oldid=<?php echo $row['idn'];?>"><button>EDIT</button></a><span> </span><a href="del_fac.php?id=<?php echo $row['Fac_id'];?>"><button>DELETE</button></a></td>
+=======
                                   <td><a href="edit_fac.php?oldid=<?php echo $row['Fac_ID'];?>"><button>EDIT</button></a><span> </span><a href="del_fac.php?id=<?php echo $row['Fac_ID'];?>"><button>DELETE</button></a></td>
+>>>>>>> e5f89193f95d5d67589238a48d31307696b5d054
                                </tr>
                                <?php $i++; } ?>
                               </tbody>
