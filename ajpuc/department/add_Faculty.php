@@ -103,7 +103,13 @@ extract($_REQUEST); ?>
                            <label for="name" class="control-label">Gender</label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="gender">
+                           <!-- <input type="text" class="form-control" name="gender"> -->
+                           <select name="Gender">
+                              <option disabled selected value> -- select an option -- </option>
+                              <option value="m">Male</option>
+                              <option value="f">Female</option>
+                              <option value="o">Others</option>
+                           </select>
                         </div>
                      </div>
 

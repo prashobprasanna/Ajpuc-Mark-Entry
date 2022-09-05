@@ -236,7 +236,7 @@ extract($_REQUEST); ?>
                            <label for="name" class="control-label">Address Line 2 </label><span id="sp">:</span> <span style="color:#f00">*</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="addl2" required>
+                           <input type="text" class="form-control" name="add12" required>
                         </div>
                      </div>
                      <div class="form-group">
