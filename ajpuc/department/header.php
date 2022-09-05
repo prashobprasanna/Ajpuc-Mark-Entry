@@ -3,7 +3,7 @@
      include("dbconfig.php");
    extract($_REQUEST);
    $email=$_SESSION["email"];
-   $dbname=$_SESSION["dbnamez"];
+  // $dbname=$_SESSION["dbnamez"];
    //echo '<pre>' . print_r($_SESSION, TRUE) . '</pre>';
 
    //$role = $_SESSION["role"];
