@@ -2,15 +2,9 @@
 include('sidebar.php');
 include('dbconfig.php');
 extract($_REQUEST);
-<<<<<<< HEAD
 $ssql="SELECT * FROM faculty where Fac_id=$oldid";
 $result=$con->query($ssql);
 $row=$result->fetch_assoc();
-=======
-$ssql = "SELECT * FROM faculty where Fac_ID=$oldid";
-$result = $con->query($ssql);
-$row = $result->fetch_assoc();
->>>>>>> e5f89193f95d5d67589238a48d31307696b5d054
 ?>
 <div class="content-wrapper">
    <!-- Content Header (Page header) -->
