@@ -120,29 +120,30 @@ extract($_REQUEST); ?>
                            <table id="example1" class="table table-bordered table-striped">
                               <thead>
                                  <tr>
-                                     <th>Photo</th>
-                                    <th>Name </th>
-                                     <th>Contact Number </th> 
-                                    <th>Address</th>
-                                      <th>Email</th>
-				   <th>Designation</th>
-				   <th>Action</th>
+                                     <th>Fname</th>
+                                    <th>Lname</th>
+                                     <th>phone_number</th> 
+                                    <th>Email</th>
+                                      <th>Status</th>
+				   <th>Gender</th>
+				   <th>Qalification</th>
                                  </tr>
                               </thead>
                               <tbody>
                                  <?php
                                   $i=1;
-                                  $sql = "SELECT * From faculty ORDER BY  Name ASC";
+                                  $sql = "SELECT * From faculty ORDER BY  Fname ASC";
                                   $result = $con->query($sql);
                                   while($row = $result->fetch_assoc())
                                   { ?>
-                                  <tr>
-                                      <td><img src="<?php echo $row['url'];?>" style="height:4.5cm;width:3.5cm;"></td>
-                                  <td><?=$row['Name'];?></td>
-                                    <td><?=$row['num'];?></td>
-                                    <td><?=$row['addl1'].'<br>'.$row['addl2'].'<br>'.$row['addl3'].'<br>'.$row['pinc'];?></td>
-				 <td><?=$row['email'];?></td>
-                                  <td><?=$row['designation'];?></td>
+                                  <tr>  
+                                  <td><?=$row['Fname'];?></td>
+                                    <td><?=$row['Lname'];?></td>
+                                    <td><?=$row['Phone_No'];?></td>
+                                    <td><?=$row['Email_ID'];?></td>
+                                    <td><?=$row['Status'];?></td>
+                                    <td><?=$row['Gender'];?></td>
+                                  <td><?=$row['Qualification'];?></td>
                                   <td><a href="edit_fac.php?oldid=<?php echo $row['idn'];?>"><button>EDIT</button></a><span> </span><a href="del_fac.php?id=<?php echo $row['idn'];?>"><button>DELETE</button></a></td>
                                </tr>
                                <?php $i++; } ?>
