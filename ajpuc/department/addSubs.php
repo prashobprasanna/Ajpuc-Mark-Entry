@@ -107,7 +107,7 @@ extract($_REQUEST); ?>
                            <label for="status" class="control-label">Status </label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="status" required placeholder="Enter the subject is active or">
+                           <input type="text" class="form-control" name="Status" required placeholder="Enter the subject is active or">
                         </div>
                      </div>
 
