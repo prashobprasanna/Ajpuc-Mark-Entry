@@ -75,13 +75,13 @@ extract($_REQUEST); ?>
            <?php if(isset($success)){ ?>
    <div class="alert alert-success alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <strong>Deleted successfully.</strong>
+  <strong>Inserted successfully.</strong>
 </div>
    <?php } ?>
    <?php if(isset($error)){ ?>
    <div class="alert alert-danger alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <strong>Deleted Unsuccessfully.</strong>
+  <strong>Inserted Unsuccessfully.</strong>
 </div>
    <?php } ?>
    
