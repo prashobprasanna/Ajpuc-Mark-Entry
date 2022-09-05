@@ -152,7 +152,7 @@ extract($_REQUEST); ?>
                                  <tr>
                                       <th>Photo</th>
                                     <th>Name </th>
-                                     <th>Contact Number </th> 
+                                     <th>ContactNumber </th> 
                                     <th>Address</th>
                                       <th>Email</th>
 				   <th>Designation</th>

@@ -133,7 +133,7 @@ td{ font-size:12px !important; }
                               </tbody>
                               <tfoot class="hidden-xs hidden-sm">
                                  <tr>
-				    <th>Photo</th>
+				    
             <th role="columnheader">Fname</th>
       <th role="columnheader"> Lname </th>
       <th role="columnheader">Roll_No </th>
