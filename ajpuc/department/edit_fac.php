@@ -2,7 +2,7 @@
 include('sidebar.php');
 include('dbconfig.php');
 extract($_REQUEST);
-$ssql="SELECT * FROM faculty where idn=$oldid";
+$ssql="SELECT * FROM faculty where Fac_id=$oldid";
 $result=$con->query($ssql);
 $row=$result->fetch_assoc();
 ?>

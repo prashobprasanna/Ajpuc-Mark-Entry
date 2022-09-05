@@ -106,7 +106,7 @@ extract($_REQUEST); ?>
                            <label for="name" class="control-label">DOB</label><span id="sp">:</span> <span style="color:#f00">*</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="usn" required>
+                           <input type="date" class="form-control" name="usn" required>
                         </div>
                      </div>
 
