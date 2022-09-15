@@ -58,7 +58,7 @@ extract($_REQUEST); ?>
                            <label for="name" class="control-label">FName </label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="fname" required>
+                           <input type="text" class="form-control" name="FName" required>
                         </div>
                      </div>
 
@@ -67,7 +67,7 @@ extract($_REQUEST); ?>
                            <label for="name" class="control-label">LName </label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="lname" required>
+                           <input type="text" class="form-control" name="LName" required>
                         </div>
                      </div>
 
@@ -76,7 +76,7 @@ extract($_REQUEST); ?>
                            <label for="name" class="control-label">Phone_No</label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="number" maxlength="10" class="form-control" name="fnum" required>
+                           <input type="number" maxlength="10" class="form-control" name="Phone_No" required>
                         </div>
                      </div>
 
@@ -85,7 +85,7 @@ extract($_REQUEST); ?>
                            <label for="fcemail" class="control-label">Email_ID</label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="fcemail" autocomplete="off" required>
+                           <input type="text" class="form-control" name="Email_ID" autocomplete="off" required>
                         </div>
                      </div>
 
@@ -94,7 +94,7 @@ extract($_REQUEST); ?>
                            <label for="name" class="control-label">Status</label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="status">
+                           <input type="text" class="form-control" name="Status">
                         </div>
                      </div>
 
@@ -103,7 +103,7 @@ extract($_REQUEST); ?>
                            <label for="name" class="control-label">Gender</label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="gender">
+                           <input type="text" class="form-control" name="Gender">
                         </div>
                      </div>
 
@@ -112,7 +112,7 @@ extract($_REQUEST); ?>
                            <label for="highqual" class="control-label">Qualification</label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <select name="highqual">
+                           <select name="Qualification">
 
                               <option value="B.Sc/M.Sc/B.Ed">B.Sc/M.Sc/B.Ed</option>
                               <option value="B.Com/M.Com/B.Ed">B.Com/M.Com/B.Ed</option>
@@ -135,7 +135,7 @@ extract($_REQUEST); ?>
                            <label for="fcpass" class="control-label">Password</label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="password" minlength="5" class="form-control" name="fcpass" autocomplete="off" required>
+                           <input type="password" minlength="5" class="form-control" name="Password" autocomplete="off" required>
                         </div>
                      </div>
 
